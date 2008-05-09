@@ -60,7 +60,7 @@ module Vlad
     options = {:config => options} if String === options
 
     recipes = {
-      :app    => :merb,
+      :app    => :god,
       :config => 'config/deploy.rb',
       :core   => :core,
       :scm    => :git,
