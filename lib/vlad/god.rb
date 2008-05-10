@@ -1,8 +1,7 @@
 require 'vlad'
 
 namespace :vlad do
-  ##
-  # God module for merb app server
+  ## God module for merb app server
 
   set :merb_cluster_nodes,  2
   set :merb_port,           4800
@@ -11,10 +10,6 @@ namespace :vlad do
 
   remote_task :setup_app, :roles => :app do
     
-  end
-
-  def merb(cmd) # :nodoc:
-    "merb #{cmd}"
   end
 
   desc "Restart the app servers"
