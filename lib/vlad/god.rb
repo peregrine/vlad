@@ -3,9 +3,6 @@ require 'vlad'
 namespace :vlad do
   ## God module for merb app server
 
-  set :merb_cluster_nodes,  2
-  set :merb_port,           4800
-
   desc "Prepares application servers for deployment.".cleanup
 
   remote_task :setup_app, :roles => :app do
