@@ -13,6 +13,7 @@ class Vlad::Git
     revision = 'HEAD' if revision =~ /head/i
 
     [ "rm -rf #{destination}",
+      ". ~/.bash_profile",
       "#{git_cmd} clone #{repository} #{destination}",
       "cd #{destination}",
       "#{git_cmd} checkout -f -b deployed-#{revision} #{revision}"
